@@ -60,3 +60,9 @@ CREATE VIEW swisspairings AS select a.playerid as id1, a.name as name1, b.player
 SELECT * FROM Players;
 SELECT * FROM Matches;
 select * from standings;
+
+/*CREATE VIEW swiss_pairings_1 as 
+        select a.player_id as "player_1_id", a.name as "player_1_name", 
+        b.player_id as "player_2_id", b.name as "player_2_name"
+        from ranked_standings_1 a, ranked_standings_1 b 
+        where a.rank+1 = b.rank and a.rank % 2 = 1;*/
