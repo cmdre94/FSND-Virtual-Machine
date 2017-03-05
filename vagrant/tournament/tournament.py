@@ -95,7 +95,7 @@ def reportMatch(winner, loser):
     db.commit()
     db.close()
 
-def swissPairings():
+def swissPairings(match=1):
     """Returns a list of pairs of players for the next round of a match.
 
     Assuming that there are an even number of players registered, each player
@@ -110,5 +110,11 @@ def swissPairings():
         id2: the second player's unique id
         name2: the second player's name
     """
-
+    db = connect()
+    c = db.cursor()
+    c.execute("SELECT * FROM swisspairings;")
+    results = c.fetchall()
+    db.commit()
+    db.close()
+    return results
 

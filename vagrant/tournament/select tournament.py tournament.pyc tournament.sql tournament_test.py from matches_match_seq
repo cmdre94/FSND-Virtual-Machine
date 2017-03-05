@@ -1,0 +1,19 @@
+                 List of relations
+ Schema |         Name         |   Type   |  Owner  
+--------+----------------------+----------+---------
+ public | losers               | view     | vagrant
+ public | match_count          | view     | vagrant
+ public | matches              | table    | vagrant
+ public | matches_match_seq    | sequence | vagrant
+ public | players              | table    | vagrant
+ public | players_playerid_seq | sequence | vagrant
+ public | setup                | table    | vagrant
+ public | setup_row_seq        | sequence | vagrant
+ public | standings            | view     | vagrant
+ public | swisspairings        | view     | vagrant
+ public | test                 | table    | vagrant
+ public | test_row_seq         | sequence | vagrant
+ public | w_or_l               | view     | vagrant
+ public | winners              | view     | vagrant
+(14 rows)
+
