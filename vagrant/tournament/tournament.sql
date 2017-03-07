@@ -7,18 +7,12 @@
 -- these lines here.
 
 --these drops have to be in a certain order because of dependencies
-DROP VIEW IF EXISTS swisspairings;
-DROP VIEW IF EXISTS setup;
-DROP VIEW IF EXISTS standings;
-DROP VIEW IF EXISTS match_count;
-DROP VIEW IF EXISTS w_or_l;
-DROP VIEW IF EXISTS winners;
-DROP VIEW IF EXISTS losers;
 
-DROP TABLE IF EXISTS Matches;
-DROP TABLE IF EXISTS Players;
+DROP DATABASE IF EXISTS tournament;
+CREATE DATABASE tournament;
+\c tournament
 
-CREATE TABLE Players(PlayerID serial, Name text, row serial, primary key (PlayerID));
+CREATE TABLE Players(PlayerID serial, Name text, primary key (PlayerID));
 
 CREATE TABLE Matches(Match SERIAL, Winner int REFERENCES players(playerid), Loser int REFERENCES players(playerid));
 
