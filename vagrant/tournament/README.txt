@@ -59,8 +59,8 @@ You will see something like this:
 vagrant@vagrant-ubuntu-trusty-32:/vagrant/tournament$
 
 7.
-type psql tournament
-This connects to the tournament database.
+type psql vagrant
+This connects to the vagrant directory.
 
 8. 
 import the sql file by typing \i tournament.sql

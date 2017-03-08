@@ -88,10 +88,6 @@ def reportMatch(winner, loser):
     c = db.cursor()
     c.execute("INSERT INTO matches (winner, loser) VALUES (%s, %s);",\
               (winner, loser))
-    c.execute("SELECT playerid FROM winners WHERE playerid = \
-              (%s);", (winner,))
-    c.execute("SELECT playerid FROM losers WHERE playerid = \
-               (%s);", (loser,))
     db.commit()
     db.close()
 
